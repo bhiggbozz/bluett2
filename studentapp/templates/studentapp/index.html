@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset = UTF-8>
+    <meta name = "viewport" content = "width= device-width, initial-scale = 1, shrink-to-fit = no">
+    <meta http-equiv= "x-ua-compatible" content="IE=edge">
+    <meta http-equiv="x-ua-compatible" content = 'chrome'>
+    <title> Login Form </title>
+    {% load static %}
+    <link rel = "stylesheet" text = "text/css" href= "{% static 'studentapp/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+</head>
+    <body>
+    <div class="login-box">
+        {% load static %}
+
+            <h3> Login Here </h3>
+
+            <form action = "." method = 'POST'>
+
+                        <select class="form-control" id="status" name = "status">
+                            <option value = "Parent">Parent</option>
+                            <option value = "Class Teacher">Teacher</option>
+                            <option value = "Subject Teacher">Subject Teacher</option>
+                        </select>
+                            {% csrf_token %}
+
+                            {{form.school}}
+                            <p> Username </p>
+                            {{form.users}}
+                            <p> Password </p>
+                            {{form.passes}}
+                            <input type ="submit"  class = "btn btn-lg btn-danger outline "name = "submit" value = "Login">
+                    <a href = "chg_password/"> Change Password </a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href = "chg_username/"> Change Username </a>
+
+            </form>
+    </div>
+    </body>
+</html>

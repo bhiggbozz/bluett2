@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="." method="post">
+              {% csrf_token %}
+
+              <div class="form-group">
+                  <input type="text" class="form-control" name="email" id="inputUsernameEmail" placeholder="Email">
+              </div>
+              <div class="form-group">
+                  <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
+              </div>
+
+              <input type="submit" name="Sign up" value="Sign up" id="Sign_up" class="button_drop outline">
+    </form>
+</body>
+<img class="align-self-center mr-3" src="data:image/jpeg;base64;{{ image }}/64x64" alt="Generic placeholder image"/>
+</html>

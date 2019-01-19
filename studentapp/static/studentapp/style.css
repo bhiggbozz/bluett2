@@ -1,0 +1,179 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    /*background: url(background.jpg);*/
+    background-size: cover;
+    background-position: centre;
+    font-family: sans-serif;
+
+}
+.login-box{
+    width: 320px;
+    height: 500px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    top: 40%;
+    left: 40%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+.login-box h3{
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: centre;
+    font-size: 15px;
+}
+.login-box p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+.login-box input[type = "text"], input[type = "password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 13px;
+}
+.login-box input[type = 'submit']
+{
+    border: none;
+    outline: none;
+    height:40px;
+    color: #fff;
+    font-size: 15px;
+    background: #1c8adb;
+    border-radius: 20px;
+}
+
+.login-box select {
+  width: 50%;
+  position: relative;
+  left: 100px;
+  margin: 20px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: #f1f1f1;
+}
+
+}
+.login-box input[type = 'submit']:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: #000;
+}
+.login-box a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 11px;
+}
+.login-box a:hover
+{
+    color: #39dc79;
+}
+
+
+
+
+
+}
+.pass-box{
+    width: 320px;
+    height: 480px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+
+}.pass-box
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+.pass-box h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: centre;
+    font-size: 17px;
+}
+.pass-box p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.pass-box input{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+.pass-box input[type = "text"], input[type = "password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 13px;
+}
+.pass-box input[type = 'submit']
+{
+    border: none;
+    outline: none;
+    height:40px;
+    color: #fff;
+    font-size: 15px;
+    background: #1c8adb;
+    border-radius: 20px;
+}
+.pass-box input[type = 'submit']:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: #000;
+}
+.pass-box a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 11px;
+}
+.pass-box a:hover
+{
+    color: #39dc79;
+
+
+.sch-head{
+     padding: 70px 60px;
+     margin: 100px;
+
+}

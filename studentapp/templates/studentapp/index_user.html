@@ -1,0 +1,28 @@
+<head>
+    <title> Login Form </title>
+    {% load static %}
+    <link rel = "stylesheet" text = "text/css" href= "{% static 'studentapp/style3.css' %}">
+</head>
+    <body>
+    <div class="user-box">
+        {% load static %}
+        <img src= "{% static 'studentapp/avatar.png' %}"  class = "avatar-user">
+            <h1> Change Username </h1>
+            <form action = "." method = "POST">
+                {% csrf_token %}
+                <p> School Username </p>
+                <input type ="text" name = "school" placeholder=" Enter  School Username">
+                <p> Username </p>
+                <input type ="text" name = "users" placeholder=" Enter Username">
+                <p> Password </p>
+                <input type ="password" name = "passes" placeholder=" Enter Password">
+                <p> New Username </p>
+                <input type ="text" name = "new user" placeholder=" Enter New Username">
+                <p> Confirm Username </p>
+                <input type ="password" name = "con user" placeholder=" Confirm New Username">
+                <input type ="submit" name = "submit" value = "Save">
+                <a href = "http://127.0.0.1:8000/studentapp/ "> Home </a>
+            </form>
+    </div>
+    </body>
+</html>

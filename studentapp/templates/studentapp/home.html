@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+
+    {% extends 'base.html' %}
+    {% block content %}
+    <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <body>
+    <head>
+        <meta charset="UTF-8">
+
+               <meta name="viewport"content="width-device-width, initial-scale=1, shrink-to-fit=no">
+                <meta http-equiv="X UA-Compatible" content="IE-edge">
+                <meta http-equiv="X UA-Compatible" content="chrome">
+                <meta http-equiv="X UA-Compatible" content="firefox">
+        <meta name="author" content="">
+        {% load static %}
+
+        <link rel="icon" href= "{% static 'studentapp/img1.png' %}">
+        <link rel = "stylesheet" text = "text/css" href= "{% static 'studentapp/style.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                crossorigin="anonymous"></script>
+        <style type = "text/css">
+
+            }
+            .dropdown-menu{
+                background-color:#cf4141!important;
+            }
+        </style>
+        <title>Bluett | Software Development Company</title>
+    </head>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+      <div class="container px-lg-5">
+        <div class = "Home">
+            <div class = "row justify-content-md-center align-items-center ">
+                 <div class = " col-lg-3 col-sm-12 col-md-6  align-self-center">
+                   {% load static %}
+                   <img src= "{% static 'studentapp/sch.jpg' %} " style = "min-height: 100px; min-width: 100px;" class = "avatar-user">
+                 </div>
+                 <div class = "col-lg-5 col-sm-12 col-md-6 ">
+                   <p><strong> <h2> {{ sch }}</h2></strong></p>
+                   <p><h5>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp {{ address  }}</h5></p>
+                   <p><h5>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp {{ motto  }}</h5></p>
+                 </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+                {% for  key, f in data.items  %}
+                  <div class = "row">
+                           <div class="media">
+                               <div class = "col col-lg-4 col-sm-12 col-md-6">
+                                  {% load static %}
+                                   {% for ft, im in pic.items %}
+                                     {% if ft == key %}
+                                         <a href="student/{{ f.0}}">
+                                             <img src= "{% static im|safe %}"  class = "w3-circle" >
+                                         </a>
+                                     {% endif %}
+                                   {% endfor %}
+                               </div>
+                           </div>
+                           <div class = " col-lg-3 col-md-6 col-sm-12 col-xs-12  bg-success">
+                             <div class = "profile">
+
+                                    <p><h4><li><strong>Student:  {{ f.0 }} </strong></li></h4></p>
+
+
+                                    <p><li> Sex:   {{ f.1 }}</li></p>
+
+
+                                    <p><li>DOB:    {{ f.2 }}</li></p>
+
+
+                                    <p><li>Admno:    {{ f.3 }}</li></p>
+
+
+                                    <p><li>Guardian:     {{ f.4 }}</li></p>
+
+
+                                    <p><li>phone No:      {{ f.5 }}</li></p>
+
+
+                                    <p><li>Addr:      {{ f.6 }}</li></p>
+
+
+                                    <p><li>Email:      {{ f.7 }}</li></p>
+                             </div>
+
+
+
+                           </div>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                {% endfor %}
+                    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis
+                        ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus.</p>
+                  </div>
+               </div>
+
+
+
+           </body>
+        </div>
+      </div>
+    </body>
+    </html>
+  {% endblock %}
+{ % endfor %}
